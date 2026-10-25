@@ -18,18 +18,17 @@ const completedTasksHolder = document.getElementById('completed-tasks'); //compl
 const createNewTaskElement = function (taskString) {
   const listItem = document.createElement('li');
 
-  //input (checkbox)
-  const checkBox = document.createElement('input'); //checkbx
+  const checkBox = document.createElement('input');
   //label
-  const label = document.createElement('label'); //label
-  //input (text)
-  const editInput = document.createElement('input'); //text
+  const label = document.createElement('label');
+  
+  const editInput = document.createElement('input');
   //button.edit
-  const editButton = document.createElement('button'); //edit button
+  const editButton = document.createElement('button');
 
   //button.delete
-  const deleteButton = document.createElement('button'); //delete button
-  const deleteButtonImg = document.createElement('img'); //delete button image
+  const deleteButton = document.createElement('button');
+  const deleteButtonImg = document.createElement('img'); 
 
   label.innerText = taskString;
   label.className = 'task';
@@ -122,17 +121,16 @@ const taskIncomplete = function () {
 addButton.addEventListener('click', addTask);
 
 const bindTaskEvents = function (taskListItem, checkBoxEventHandler) {
-  //select ListItems children
   const checkBox = taskListItem.querySelector('input[type=checkbox]');
   const editButton = taskListItem.querySelector('button.edit');
   const deleteButton = taskListItem.querySelector('button.delete');
 
   //Bind editTask to edit button.
-  editButton.onclick = editTask;
+  editButton.addEventListener('click', editTask);
   //Bind deleteTask to delete button.
-  deleteButton.onclick = deleteTask;
+  deleteButton.addEventListener('click', deleteTask);
   //Bind taskCompleted to checkBoxEventHandler.
-  checkBox.onchange = checkBoxEventHandler;
+  checkBox.addEventListener('change', checkBoxEventHandler);
 };
 
 //cycle over incompleteTaskHolder ul list items
