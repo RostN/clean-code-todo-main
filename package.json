@@ -1,0 +1,19 @@
+{
+  "name": "clean-code-todo-main",
+  "version": "1.0.0",
+  "description": "Учебный репозиторий для задания [«Clean Code»](https://github.com/rolling-scopes-school/tasks/blob/master/fullstack-engineering/tasks/clean-code/README.md) курса RS School Fullstack Engineering.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RostN/clean-code-todo-main.git"
+  },
+  "keywords": [],
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/RostN/clean-code-todo-main/issues"
+  },
+  "homepage": "https://github.com/RostN/clean-code-todo-main#readme"
+}
