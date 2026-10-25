@@ -21,14 +21,14 @@ const createNewTaskElement = function (taskString) {
   const checkBox = document.createElement('input');
   //label
   const label = document.createElement('label');
-  
+
   const editInput = document.createElement('input');
   //button.edit
   const editButton = document.createElement('button');
 
   //button.delete
   const deleteButton = document.createElement('button');
-  const deleteButtonImg = document.createElement('img'); 
+  const deleteButtonImg = document.createElement('img');
 
   label.innerText = taskString;
   label.className = 'task';
@@ -73,17 +73,17 @@ const editTask = function () {
 
   const editInput = listItem.querySelector('input[type=text]');
   const label = listItem.querySelector('label');
-  const editBtn = listItem.querySelector('.edit');
+  const editButton = listItem.querySelector('.edit');
   const containsClass = listItem.classList.contains('editMode');
   //If class of the parent is .editmode
   if (containsClass) {
     //switch to .editmode
     //label becomes the inputs value.
     label.innerText = editInput.value;
-    editBtn.innerText = 'Edit';
+    editButton.innerText = 'Edit';
   } else {
     editInput.value = label.innerText;
-    editBtn.innerText = 'Save';
+    editButton.innerText = 'Save';
   }
 
   //toggle .editmode on the parent.
@@ -93,9 +93,9 @@ const editTask = function () {
 //Delete task.
 const deleteTask = function () {
   const listItem = this.parentNode;
-  const ul = listItem.parentNode;
+  const parentList = listItem.parentNode;
   //Remove the parent list item from the ul.
-  ul.removeChild(listItem);
+  parentList.removeChild(listItem);
 };
 
 //Mark task completed
