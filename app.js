@@ -8,7 +8,9 @@
 // Event handling, user interaction is what starts the code execution.
 
 const taskInput = document.getElementById('new-task'); //Add a new task.
-const addButton = document.querySelector('#topSectionForAddingElementToList button'); //first button
+const addButton = document.querySelector(
+  '#topSectionForAddingElementToList button'
+); //first button
 const incompleteTaskHolder = document.getElementById('incompleteTasks'); //ul of #incompleteTasks
 const completedTasksHolder = document.getElementById('completed-tasks'); //completed-tasks
 
@@ -95,8 +97,6 @@ const editTask = function () {
 
 //Delete task.
 const deleteTask = function () {
-  console.log('Delete Task...');
-
   const listItem = this.parentNode;
   const ul = listItem.parentNode;
   //Remove the parent list item from the ul.
@@ -105,8 +105,6 @@ const deleteTask = function () {
 
 //Mark task completed
 const taskCompleted = function () {
-  console.log('Complete Task...');
-
   //Append the task list item to the #completed-tasks
   const listItem = this.parentNode;
   completedTasksHolder.appendChild(listItem);
@@ -114,7 +112,6 @@ const taskCompleted = function () {
 };
 
 const taskIncomplete = function () {
-  console.log('Incomplete Task...');
   //Mark task as incomplete.
   //When the checkbox is unchecked
   //Append the task list item to the #incompleteTasks.
@@ -124,18 +121,16 @@ const taskIncomplete = function () {
 };
 
 const ajaxRequest = function () {
-  console.log('AJAX Request');
+  // console.log('AJAX Request');
 };
 
 //The glue to hold it all together.
 
 //Set the click handler to the addTask function.
-addButton.onclick = addTask;
 addButton.addEventListener('click', addTask);
 addButton.addEventListener('click', ajaxRequest);
 
 const bindTaskEvents = function (taskListItem, checkBoxEventHandler) {
-  console.log('bind list item events');
   //select ListItems children
   const checkBox = taskListItem.querySelector('input[type=checkbox]');
   const editButton = taskListItem.querySelector('button.edit');
