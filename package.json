@@ -13,12 +13,13 @@
     "url": "git+https://github.com/RostN/clean-code-todo-main.git"
   },
   "keywords": [],
-  "type": "commonjs",
+  "type": "module",
   "bugs": {
     "url": "https://github.com/RostN/clean-code-todo-main/issues"
   },
   "homepage": "https://github.com/RostN/clean-code-todo-main#readme",
   "devDependencies": {
+    "@eslint/js": "^10.0.1",
     "eslint": "^10.13.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-prettier": "^5.5.7",
