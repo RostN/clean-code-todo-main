@@ -11,8 +11,9 @@ export default [
       },
     },
     rules: {
-      'no-unused-vars': 'warn',
-      'no-console': 'off',
+      'no-var': 'error',
+      'prefer-const': 'error',
+      'no-console': 'error',
     },
   },
 ];
